@@ -7,8 +7,7 @@ using System.Web;
 namespace _1911065662_phamvantay_BigSchool.ViewModels
 {
     public class CourseViewModel
-    {
-        //adadada
+    {   
         public string Place { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
