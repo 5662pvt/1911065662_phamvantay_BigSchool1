@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace _1911065662_phamvantay_BigSchool.Controllers
 {
-    //test
+    //aaaaaaaaaaaaaaaa
     public class CoursesController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
