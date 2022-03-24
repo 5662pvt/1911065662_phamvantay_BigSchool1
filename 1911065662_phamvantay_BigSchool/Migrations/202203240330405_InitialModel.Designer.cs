@@ -7,13 +7,13 @@ namespace _1911065662_phamvantay_BigSchool.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class PopulateCatoryTable : IMigrationMetadata
+    public sealed partial class InitialModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateCatoryTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202203140823406_PopulateCatoryTable"; }
+            get { return "202203240330405_InitialModel"; }
         }
         
         string IMigrationMetadata.Source
