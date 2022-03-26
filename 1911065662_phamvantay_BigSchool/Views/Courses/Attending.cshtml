@@ -1,9 +1,11 @@
 ﻿@model _1911065662_phamvantay_BigSchool.ViewModels.CoursesViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Attending</h2>
 
 <div class="row">
     <ul class="course">
@@ -56,6 +58,7 @@
                         alert("Something faied !");
                     });
             });
+
             $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target);
                 $.post("/api/followings", { followeeId: button.attr("data-user-id") })
@@ -72,5 +75,7 @@
         });
     </script>
 }
+
+
 
 
