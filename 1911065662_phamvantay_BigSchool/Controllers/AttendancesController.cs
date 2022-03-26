@@ -1,4 +1,5 @@
 ﻿using _1911065662_phamvantay_BigSchool.Models;
+using _1911065662_phamvantay_BigSchool.DTOs;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -19,14 +20,18 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
            _dbContext = new ApplicationDbContext();
         }
         [HttpPost]
-        public IHttpActionResult Attend([FromBody] int courseId)
+        public IHttpActionResult Attend(AttendanceDto attendanceDto)
         {
+            var userId = User.Identity.GetUserId();
+            if (_dbContext.Attendances.Any(a => a.AttendeeId == userId && a.CourseId == attendanceDto.CourseId))
+                return BadRequest("The Attendance already exists!");
+                
             var attendance = new Attendances
             {
-                CourseId = courseId,
-                AttendeeId = User.Identity.GetUserId()
+                CourseId = attendanceDto.CourseId,
+                AttendeeId = userId
             };
-            _dbContext.Attendance.Add(attendance);
+            _dbContext.Attendances.Add(attendance);
             _dbContext.SaveChanges();
             return Ok();
         }
