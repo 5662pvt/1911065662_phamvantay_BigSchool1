@@ -21,7 +21,7 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
         [HttpPost]
         public IHttpActionResult Attend([FromBody] int courseId)
         {
-            var attendance = new Attendance
+            var attendance = new Attendances
             {
                 CourseId = courseId,
                 AttendeeId = User.Identity.GetUserId()

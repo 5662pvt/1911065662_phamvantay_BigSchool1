@@ -12,7 +12,7 @@ namespace _1911065662_phamvantay_BigSchool.Models
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Attendance> Attendance { get; set; }
+        public DbSet<Attendances> Attendance { get; set; }
         public ApplicationDbContext()
              : base("DefaultConnection", throwIfV1Schema: false)
         { }
@@ -23,7 +23,7 @@ namespace _1911065662_phamvantay_BigSchool.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Attendance>()
+            modelBuilder.Entity<Attendances>()
                .HasRequired(a => a.Course)
                .WithMany()
                .WillCascadeOnDelete(false);

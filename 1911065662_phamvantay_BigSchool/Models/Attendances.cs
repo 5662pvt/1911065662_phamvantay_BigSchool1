@@ -7,7 +7,7 @@ using System.Web;
 
 namespace _1911065662_phamvantay_BigSchool.Models
 {
-    public class Attendance
+    public class Attendances
     {
         public Course Course { get; set; }
         [Key]
