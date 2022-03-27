@@ -26,7 +26,7 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
             if (_dbContext.Attendances.Any(a => a.AttendeeId == userId && a.CourseId == attendanceDto.CourseId))
                 return BadRequest("The Attendance already exists!");
                 
-            var attendance = new Attendances
+            var attendance = new Attendance
             {
                 CourseId = attendanceDto.CourseId,
                 AttendeeId = userId
