@@ -25,7 +25,6 @@ namespace _1911065662_phamvantay_BigSchool.ViewModels
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
-
         public IEnumerable<Course> UpcomingCourse { get; set; }
         public string Heading { get; set; }
         public string Action

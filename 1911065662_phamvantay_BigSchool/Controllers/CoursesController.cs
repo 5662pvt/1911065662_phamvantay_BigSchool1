@@ -84,6 +84,7 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
             return View(courses);
         }
 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var userId = User.Identity.GetUserId();

@@ -240,9 +240,9 @@
     <Compile Include="Migrations\202203270336257_AddAttendance1.designer.cs">
       <DependentUpon>202203270336257_AddAttendance1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202203280508058_AddIsCanceledColumnToCourse.cs" />
-    <Compile Include="Migrations\202203280508058_AddIsCanceledColumnToCourse.designer.cs">
-      <DependentUpon>202203280508058_AddIsCanceledColumnToCourse.cs</DependentUpon>
+    <Compile Include="Migrations\202203280745467_AddIsCanceledColumnToCourse.cs" />
+    <Compile Include="Migrations\202203280745467_AddIsCanceledColumnToCourse.designer.cs">
+      <DependentUpon>202203280745467_AddIsCanceledColumnToCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -361,8 +361,8 @@
     <EmbeddedResource Include="Migrations\202203270336257_AddAttendance1.resx">
       <DependentUpon>202203270336257_AddAttendance1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202203280508058_AddIsCanceledColumnToCourse.resx">
-      <DependentUpon>202203280508058_AddIsCanceledColumnToCourse.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202203280745467_AddIsCanceledColumnToCourse.resx">
+      <DependentUpon>202203280745467_AddIsCanceledColumnToCourse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -13,7 +13,7 @@ namespace _1911065662_phamvantay_BigSchool.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202203280508058_AddIsCanceledColumnToCourse"; }
+            get { return "202203280745467_AddIsCanceledColumnToCourse"; }
         }
         
         string IMigrationMetadata.Source
