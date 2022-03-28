@@ -23,7 +23,8 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
         {
             var viewModel = new CourseViewModel
             {
-                Categories = _dbContext.Categories.ToList()
+                Categories = _dbContext.Categories.ToList(),
+                Heading = "Add Course"
             };
             return View(viewModel);
         }
@@ -96,11 +97,34 @@ namespace _1911065662_phamvantay_BigSchool.Controllers
                 Time = course.DateTime.ToString("HH:mm"),
                 Category = course.CategoryId,
                 Place = course.Place,
-           
+                Heading = "Edit Course",
+                Id = course.Id
             };
-
             return View("Create", viewModel);
 
+        }
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(CourseViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Categories = _dbContext.Categories.ToList();
+                return View("Create", viewModel);
+            }
+
+            var userId = User.Identity.GetUserId();
+            var course = _dbContext.Courses.Single(c => c.Id == viewModel.Id && c.LecturerId == userId);
+
+            course.Place = viewModel.Place;
+            course.DateTime = viewModel.GetDateTime();
+            course.CategoryId = viewModel.Category;
+
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

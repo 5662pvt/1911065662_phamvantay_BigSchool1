@@ -29,8 +29,8 @@
 
                 <div class="action">
                     <a href="@Url.Action("Edit","Courses",new { id= course.Id})">Edit</a> |
-                    @*<a href="#" class="js-cancel-course" data-course-id="@course.Id">Delete</a>*@
-                    <a href=""> Delete </a>
+                    <a href="#" class="js-cancel-course" data-course-id="@course.Id">Cancel</a>
+                    
                 </div>
 
             </div >
@@ -57,7 +57,7 @@
                                 });
                             })
                             .fail(function () {
-                                alert("Something failed ! khoa");
+                                alert("Something failed!");
                             });
                     });
             });
